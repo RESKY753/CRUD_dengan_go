@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form untuk karyawan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar=dark bg-primary">
+      <div class="contair-fluid">
+        <a href="#" class="navbar-brand">GO CRUD</a>
+      </div>
+    </nav>
+    <div class="container my-5">
+      <div class="d-flex justify-content-between mb-4"> 
+        <h3>Form Karyawan</h3>
+      </div>
+        <form action="/employee/create" method="post">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nama Karyawan</label>
+            <input type="text" name="name" id="name" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="npwp" class="form-label">NPWP</label>
+            <input type="text" name="npwp" id="npwp" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <textarea name="address" id="address" class="form-control">
+
+            </textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-sm">Tambah</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

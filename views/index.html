@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>List Employe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar=dark bg-primary">
+      <div class="contair-fluid">
+        <a href="#" class="navbar-brand">GO CRUD</a>
+      </div>
+    </nav>
+    <div class="container my-5">
+      <div class="d-flex justify-content-between"> 
+        <h3>list Employee</h3>
+        <a href="/employee/create" class="btn btn-sm btn-primary">Tambah data</a>
+      </div>
+
+      <table class="table my-4">
+      <thead>
+        <tr>
+          <td>Nama</td>
+          <td>NPWP</td>
+          <td>Alamat</td>
+          <td>Action</td>
+        </tr>
+      </thead>
+      <tbody>
+        {{range $index, $employee := .employees }}
+        <tr>
+          <td>{{ $employee.Name }}</td>
+          <td>{{ $employee.NPWP }}</td>
+          <td>{{ $employee.Address }}</td>
+          <td>
+            <a href="/employee/update?id={{ $employee.Id}}" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/employee/delete?id={{ $employee.Id}}" class="btn btn-danger btn-sm">Hapus</a>
+          </td>
+        </tr>
+      </tbody>
+      {{ end }}
+    </table>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
